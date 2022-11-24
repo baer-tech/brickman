@@ -10,5 +10,5 @@ vars:
   project_name:
     type: string
     description: Name of your project
-    default: brickman_demo
+    default: Brickman Demo App
     prompt: Please enter the name of your project
