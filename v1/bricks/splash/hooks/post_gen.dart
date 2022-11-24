@@ -20,7 +20,7 @@ Future run(HookContext context) async {
     };
 
     final strYaml = toYamlString(modifiable);
-    File("pubspec.yaml").writeAsStringSync(strYaml);
+    File("../pubspec.yaml").writeAsStringSync(strYaml);
   } on FileSystemException catch (_) {
     logger.alert(
       red.wrap(
