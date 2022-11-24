@@ -16,6 +16,7 @@ Future run(HookContext context) async {
 
     final modifiable = getModifiableNode(yaml);
     modifiable['dependencies'] = {
+      ...modifiable['dependencies'],
       'splash': {'path': 'features/splash'}
     };
 
