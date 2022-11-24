@@ -9,7 +9,7 @@ Future run(HookContext context) async {
   final directory = Directory.current.path;
 
   try {
-    File file = File("pubspec.yaml");
+    File file = File("$directory/pubspec.yaml");
 
     final yaml = loadYaml(file.readAsStringSync());
 
