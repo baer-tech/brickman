@@ -13,6 +13,7 @@ class MainPage extends ConsumerWidget {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: const [
             Text(routeName),
             ColoredTextWidget(),
