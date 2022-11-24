@@ -1,0 +1,14 @@
+name: app_scaffold
+description: A new brick created with the Mason CLI for initial application scaffold setup using riverpod, go_router.
+version: 0.1.0
+repository: https://github.com/baer-tech/brickman/tree/main/v1/bricks/app_scaffold
+
+environment:
+  mason: ">=0.1.0-dev.38 <0.1.0"
+
+vars:
+  project_name:
+    type: string
+    description: Name of your project
+    default: Brickman demo
+    prompt: Please enter the name of your project

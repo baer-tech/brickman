@@ -1,0 +1,11 @@
+bricks:
+  app_scaffold:
+    path: v1/bricks/app_scaffold
+  authentication:
+    path: v1/bricks/authentication
+  theming:
+    path: v1/bricks/theming
+  splash:
+    path: v1/bricks/splash
+  todo_list:
+    path: v1/bricks/todo_list
