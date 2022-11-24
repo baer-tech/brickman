@@ -3,8 +3,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'widgets/colored_text_widget.dart';
 
-class MainPage extends ConsumerWidget {
-  const MainPage({super.key});
+class HomePage extends ConsumerWidget {
+  const HomePage({super.key});
 
   static const routeName = '/main';
 

@@ -1,16 +1,16 @@
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'home/ui/main_page.dart';
+import 'home/ui/home_page.dart';
 
 final routerProvider = Provider<GoRouter>(
   (ref) {
     return GoRouter(
-      initialLocation: MainPage.routeName,
+      initialLocation: HomePage.routeName,
       routes: [
         GoRoute(
-          path: MainPage.routeName,
-          builder: (context, state) => const MainPage(),
+          path: HomePage.routeName,
+          builder: (context, state) => const HomePage(),
         ),
       ],
     );
