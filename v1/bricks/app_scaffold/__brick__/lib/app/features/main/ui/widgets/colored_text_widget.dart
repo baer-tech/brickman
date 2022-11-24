@@ -7,7 +7,7 @@ class ColoredTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "Just another brick in the wall...",
-      style: Theme.of(context).textTheme.headline4,
+      style: Theme.of(context).textTheme.headline5,
     );
   }
 }
