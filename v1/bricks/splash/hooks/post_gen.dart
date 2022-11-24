@@ -9,7 +9,7 @@ Future run(HookContext context) async {
   final directory = Directory.current.path;
 
   try {
-    File file = File("$directory/pubspec.yaml");
+    File file = File("pubspec.yaml");
 
     final yaml = loadYaml(file.readAsStringSync());
 
@@ -19,7 +19,7 @@ Future run(HookContext context) async {
     };
 
     final strYaml = toYamlString(modifiable);
-    File("pubspec.yaml").writeAsStringSync(strYaml);
+    File("pubspec-output.yaml").writeAsStringSync(strYaml);
   } on FileSystemException catch (_) {
     logger.alert(
       red.wrap(
