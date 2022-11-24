@@ -1,1 +1,1 @@
-### Application Scaffold Brick
+### Application Scaffold Brick 🧱
