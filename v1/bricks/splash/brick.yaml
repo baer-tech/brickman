@@ -1,0 +1,14 @@
+name: splash
+description: A new brick created with the Mason CLI for Splash screen
+version: 0.1.0
+repository: https://github.com/baer-tech/brickman/tree/main/v1/bricks/splash
+
+environment:
+  mason: ">=0.1.0-dev.38 <0.1.0"
+
+vars:
+  splash_message:
+    type: string
+    description: Title or message to show on Splash screen
+    default: Brickman
+    prompt: Please enter the title or message to show on Splash screen
