@@ -15,6 +15,11 @@ Future run(HookContext context) async {
     } else {
       folders = directory.split('/').toList();
     }
+    logger.alert(
+      red.wrap(
+        'Directory: $directory - $folders',
+      ),
+    );
     final libIndex = folders.indexWhere((folder) => folder == 'lib');
     final pubSpecFile = File('${folders.sublist(0, libIndex).join('/')}/pubspec.yaml');
 
