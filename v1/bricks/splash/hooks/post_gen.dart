@@ -7,11 +7,18 @@ Future run(HookContext context) async {
   final logger = context.logger;
 
   final directory = Directory.current.path;
+  List<String> folders;
 
   try {
-    File file = File("pubspec.yaml");
+    if (Platform.isWindows) {
+      folders = directory.split(r'\').toList();
+    } else {
+      folders = directory.split('/').toList();
+    }
+    final libIndex = folders.indexWhere((folder) => folder == 'lib');
+    final pubSpecFile = File('${folders.sublist(0, libIndex).join('/')}/pubspec.yaml');
 
-    final yaml = loadYaml(file.readAsStringSync());
+    final yaml = loadYaml(pubSpecFile.readAsStringSync());
 
     final modifiable = getModifiableNode(yaml);
     modifiable['dependencies'] = {
@@ -19,7 +26,7 @@ Future run(HookContext context) async {
     };
 
     final strYaml = toYamlString(modifiable);
-    File("pubspec-output.yaml").writeAsStringSync(strYaml);
+    File("pubspec.yaml").writeAsStringSync(strYaml);
   } on FileSystemException catch (_) {
     logger.alert(
       red.wrap(
