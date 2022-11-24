@@ -10,20 +10,9 @@ Future run(HookContext context) async {
   List<String> folders;
 
   try {
-    if (Platform.isWindows) {
-      folders = directory.split(r'\').toList();
-    } else {
-      folders = directory.split('/').toList();
-    }
-    logger.alert(
-      red.wrap(
-        'Directory: $directory - $folders',
-      ),
-    );
-    final libIndex = folders.indexWhere((folder) => folder == 'lib');
-    final pubSpecFile = File('${folders.sublist(0, libIndex).join('/')}/pubspec.yaml');
+    File file = File("../pubspec.yaml");
 
-    final yaml = loadYaml(pubSpecFile.readAsStringSync());
+    final yaml = loadYaml(file.readAsStringSync());
 
     final modifiable = getModifiableNode(yaml);
     modifiable['dependencies'] = {
