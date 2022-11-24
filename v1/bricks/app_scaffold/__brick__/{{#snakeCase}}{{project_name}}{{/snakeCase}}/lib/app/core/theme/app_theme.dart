@@ -5,14 +5,14 @@ class AppTheme {
   ThemeData get lightTheme {
     // TODO: Add light theme
     return ThemeData(
-      scaffoldBackgroundColor: Colors.blueGrey,
+      scaffoldBackgroundColor: Colors.blue,
     );
   }
 
   ThemeData get darkTheme {
     // TODO: Add dark theme
     return ThemeData(
-      scaffoldBackgroundColor: Colors.blueGrey,
+      scaffoldBackgroundColor: Colors.blue,
     );
   }
 }

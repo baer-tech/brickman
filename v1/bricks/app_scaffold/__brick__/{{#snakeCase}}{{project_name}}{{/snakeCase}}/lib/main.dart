@@ -7,8 +7,8 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(
-    ProviderScope(
-      child: const App(),
+    const ProviderScope(
+      child: App(),
     ),
   );
 }
