@@ -10,12 +10,12 @@ class MainPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
-          children: [
+          children: const [
             Text(routeName),
-            const ColoredTextWidget(),
+            ColoredTextWidget(),
           ],
         ),
       ),
