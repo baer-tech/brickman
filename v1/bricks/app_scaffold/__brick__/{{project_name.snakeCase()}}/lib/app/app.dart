@@ -14,7 +14,7 @@ class App extends ConsumerWidget {
     final router = ref.read(routerProvider);
 
     return MaterialApp.router(
-      title: "{{project_name}}",
+      title: "{{project_name.sentenceCase()}}",
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       theme: appTheme.lightTheme,
