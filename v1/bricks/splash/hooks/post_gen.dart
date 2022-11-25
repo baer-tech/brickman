@@ -4,6 +4,11 @@ import 'package:mason/mason.dart';
 import 'package:yaml_modify/yaml_modify.dart';
 
 Future run(HookContext context) async {
+  await _runEditPubspec(context);
+  await _runFlutterPubGet(context);
+}
+
+Future<void> _runEditPubspec(HookContext context) async {
   final logger = context.logger;
 
   final directory = Directory.current.path;
@@ -32,5 +37,29 @@ Future run(HookContext context) async {
     throw Exception();
   } on Exception catch (e) {
     throw e;
+  }
+}
+
+Future<void> _runFlutterPubGet(HookContext context) async {
+  final flutterPubGetProgress = context.logger.progress(
+    'running "flutter pub get"',
+  );
+  final result = await Process.start(
+    'flutter',
+    ['pub', 'get'],
+    workingDirectory: context.vars['project_name'],
+  );
+
+  final exitCode = await result.exitCode;
+
+  if (exitCode == 0) {
+    flutterPubGetProgress.complete('Flutter pub get successfully finished.');
+  } else {
+    final errorBytes = await result.stderr.first;
+    final error = systemEncoding.decode(errorBytes);
+    flutterPubGetProgress.complete(
+      'Flutter pub get had an error $error.',
+    );
+    exit(exitCode);
   }
 }
