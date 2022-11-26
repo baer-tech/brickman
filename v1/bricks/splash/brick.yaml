@@ -1,6 +1,6 @@
 name: splash
 description: A new brick created with the Mason CLI for Splash screen
-version: 0.2.0
+version: 0.3.0
 repository: https://github.com/baer-tech/brickman/tree/main/v1/bricks/splash
 
 environment:
