@@ -1,6 +1,6 @@
 name: app_scaffold
 description: A new brick created with the Mason CLI for initial application scaffold setup using riverpod, go_router.
-version: 0.1.0
+version: 0.2.0
 repository: https://github.com/baer-tech/brickman/tree/main/v1/bricks/app_scaffold
 
 environment:

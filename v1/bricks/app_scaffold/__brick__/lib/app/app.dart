@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../l10n/l10n.dart';
-import '../router.dart';
-import '../theme/app_theme.dart';
+import '/l10n/l10n.dart';
+import '/router.dart';
+import '/theme/app_theme.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});
@@ -14,7 +14,7 @@ class App extends ConsumerWidget {
     final router = ref.read(routerProvider);
 
     return MaterialApp.router(
-      title: "{{project_name.sentenceCase()}}",
+      title: "Brickman demo app",
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       theme: appTheme.lightTheme,

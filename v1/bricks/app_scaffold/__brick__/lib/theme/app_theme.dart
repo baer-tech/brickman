@@ -3,16 +3,14 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class AppTheme {
   ThemeData get lightTheme {
-    // TODO: Add light theme
     return ThemeData(
-      scaffoldBackgroundColor: Colors.blue,
+      scaffoldBackgroundColor: const Color.fromARGB(255, 11, 11, 11),
     );
   }
 
   ThemeData get darkTheme {
-    // TODO: Add dark theme
     return ThemeData(
-      scaffoldBackgroundColor: Colors.blue,
+      scaffoldBackgroundColor: const Color.fromARGB(255, 11, 11, 11),
     );
   }
 }
