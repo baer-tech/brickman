@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:splash/splash.dart';
+//import 'package:splash/splash.dart';
 
 import 'home/ui/main_page.dart';
 import 'home/ui/views/second_view.dart';
