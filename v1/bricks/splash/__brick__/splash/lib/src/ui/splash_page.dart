@@ -7,6 +7,8 @@ import 'package:flutter/scheduler.dart';
 import 'package:splash/src/shaders/splash_sprv.dart';
 
 class SplashPage extends StatefulWidget {
+  static const routeName = '/';
+
   const SplashPage({super.key});
 
   @override
