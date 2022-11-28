@@ -1,0 +1,7 @@
+name: authorisation
+description: A new brick created with the Mason CLI for authorisation and landing page.
+version: 0.1.0
+repository: https://github.com/baer-tech/brickman/tree/main/v1/bricks/authorisation
+
+environment:
+  mason: ">=0.1.0-dev.38 <0.1.0"

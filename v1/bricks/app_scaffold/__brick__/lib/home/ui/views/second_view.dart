@@ -11,7 +11,7 @@ class SecondView extends StatelessWidget {
       child: Center(
         child: Text(
           "Second view",
-          style: Theme.of(context).textTheme.headline5?.copyWith(color: Colors.white),
+          style: Theme.of(context).textTheme.headline5,
         ),
       ),
     );

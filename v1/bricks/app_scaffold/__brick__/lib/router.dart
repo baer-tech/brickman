@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 //import 'package:splash/splash.dart';
+//import 'package:authorisation/authorisation.dart';
 
 import 'home/ui/main_page.dart';
 import 'home/ui/views/second_view.dart';
@@ -21,6 +22,11 @@ final routerProvider = Provider<GoRouter>(
           path: SplashPage.routeName,
           parentNavigatorKey: _rootNavigatorKey,
           builder: (_, state) => const SplashPage(),
+        ), */
+        /* GoRoute(
+          path: LandingPage.routeName,
+          parentNavigatorKey: _rootNavigatorKey,
+          builder: (_, state) => const LandingPage(),
         ), */
         ShellRoute(
           navigatorKey: _homeContentNavigatorKey,

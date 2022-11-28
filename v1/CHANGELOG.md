@@ -1,3 +1,6 @@
+# 0.3.0
+- Add authorisation brick
+
 # 0.2.0
 - Add splash brick
 

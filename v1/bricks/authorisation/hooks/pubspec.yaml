@@ -1,0 +1,8 @@
+name: splash
+
+environment:
+  sdk: ">=2.18.5 <3.0.0"
+
+dependencies:
+  mason: ^0.1.0-dev.38
+  yaml_modify: ^1.0.1

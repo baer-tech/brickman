@@ -11,7 +11,7 @@ class HomeView extends StatelessWidget {
       child: Center(
         child: Text(
           "Another brick in the wall...",
-          style: Theme.of(context).textTheme.headline5?.copyWith(color: Colors.white),
+          style: Theme.of(context).textTheme.headline5,
         ),
       ),
     );
