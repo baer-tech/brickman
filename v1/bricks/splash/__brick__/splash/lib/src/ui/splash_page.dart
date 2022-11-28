@@ -75,7 +75,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "🧱 Brickman 🧱",
+                  "🧱 {{splash_message.titleCase()}} 🧱",
                   style: Theme.of(context).textTheme.headline4?.copyWith(
                     color: Colors.white,
                     shadows: const [
