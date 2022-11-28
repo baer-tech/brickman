@@ -42,7 +42,7 @@ Future<void> _runEditLocalPubspec(HookContext context) async {
   final logger = context.logger;
 
   try {
-    File file = File("./pubspec.yaml");
+    File file = File("./authorisation/pubspec.yaml");
 
     final yaml = loadYaml(file.readAsStringSync());
 
@@ -53,7 +53,7 @@ Future<void> _runEditLocalPubspec(HookContext context) async {
     };
 
     final strYaml = toYamlString(modifiable);
-    File("./pubspec.yaml").writeAsStringSync(strYaml);
+    File("./authorisation/pubspec.yaml").writeAsStringSync(strYaml);
   } on FileSystemException catch (_) {
     logger.alert(
       red.wrap(
