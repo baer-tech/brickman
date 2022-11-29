@@ -20,7 +20,7 @@ Future<void> _runEditRootPubspec(HookContext context) async {
     final modifiable = getModifiableNode(yaml);
     modifiable['dependencies'] = {
       ...modifiable['dependencies'],
-      'splash': {'path': 'features/splash'}
+      'authorisation': {'path': 'features/authorisation'}
     };
 
     final strYaml = toYamlString(modifiable);
