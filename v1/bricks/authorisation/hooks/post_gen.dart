@@ -46,10 +46,12 @@ Future<void> _runEditLocalPubspec(HookContext context) async {
 
     final yaml = loadYaml(file.readAsStringSync());
 
+    final projectName = context.vars['project_name'];
+
     final modifiable = getModifiableNode(yaml);
     modifiable['dependencies'] = {
       ...modifiable['dependencies'],
-      "${context.vars['project_name']}": {'path': '../..'}
+      '$projectName': {'path': '../..'}
     };
 
     final strYaml = toYamlString(modifiable);
