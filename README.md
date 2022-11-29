@@ -1,6 +1,6 @@
 ## 🧱 Brickman demo 🧱
 
-### use default propmt values for now ###
+### use default prompt values for now ###
 
 This is a quick demo project to demonstrate Flutter's code generating capabilities. For this we are using the **mason** package (article from the author of the package explaining how this works: [https://verygood.ventures/blog/code-generation-with-mason](https://verygood.ventures/blog/code-generation-with-mason) ). What this demo has is a working app scaffold, splash brick (with custom shader background) and authorisation brick. Bricks edit the necessary yaml files with post gen hooks. For expediency the backend supporting the authorisation brick is Supabase running on Fly.io. What it does not have and would have liked to include (due to time constraints) is: transitioning from mason code generation to regular code generation via post gen hooks and [Remote Flutter Widgets](https://github.com/flutter/packages/tree/main/packages/rfw)
 
